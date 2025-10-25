@@ -1,0 +1,12 @@
+h1{
+    color:dodgerblue;
+}
+
+#login,#register{
+    background-color: cyan;
+}
+
+#search{
+    background-color: #000;
+    color: aliceblue;
+}

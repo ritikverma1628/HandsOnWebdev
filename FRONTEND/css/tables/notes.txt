@@ -1,0 +1,13 @@
+tags in html are 
+
+table-- use to create a table
+caption-- used to give a name o the table
+tr--used to create the row of the table
+td--use to create a normal cell of the table
+th--use to create the cells of the header rows of the table
+
+sematic tags in html tables
+
+thead--- header rows of table are kept as child of this tag
+tbody-- the main content rows of the tables are kept as child of thsi tag
+tfoot-- the footer rows of the table are kept under thid tag

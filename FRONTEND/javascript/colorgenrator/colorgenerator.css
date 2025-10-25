@@ -1,0 +1,15 @@
+*{
+    text-align: center;
+}
+
+#box{
+    border: 2px solid black;
+    width: 80%;
+    height: 100px;
+    margin: 0px auto;
+}
+
+#btn{
+    padding: 3px;
+    font-size: 18px;
+}

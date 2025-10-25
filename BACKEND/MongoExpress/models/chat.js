@@ -1,0 +1,18 @@
+const mongoose = require('mongoose');
+
+const chatSchema = new mongoose.Schema({
+    from:{
+        type: String,
+        required : true
+    },
+    to:{
+        type: String,
+        required: true
+    },
+    msg:{
+        type: String
+    }
+},{timestamps:{createdAt:'sentAt', updatedAt:'editedAt'}})
+
+const Chat = new mongoose.model("Chat", chatSchema);
+module.exports = Chat;

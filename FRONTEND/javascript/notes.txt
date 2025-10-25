@@ -1,0 +1,48 @@
+array have some methods which take callbacks as arguments------
+
+1.array.forEach(callback)----applies the callback function definition for every element of the array, it cannot return the transformed array value
+
+2.array.map(callback)---it applies the callback definition to each element of the array and can also return the transformed value to form a transformed array.
+
+3.array.filter(callback)------it applies the condition wriiten in callback to every element of the array and return only those elemets for which the callback condition says true.
+
+4.array.every(callback)-----return true or false--return true iff for all elements of array the callback condition is true
+
+5.array.some(callback)----returns true or false-- return false iff for all the elements of array =m the callback condition is false
+
+6.array.reduce(reducer function with two arguments(collector, element))-------
+returns a single value, 
+reduce method takes two arguments - a callback and a default value of the accumulator(optional),
+callback also takes two arguments- one is accumualtor and other is the array element,
+by default the accumulator is initialised with the first element of the array and and the iteration starts from the second element of the array 
+this function runs for all the elements of the array which is the second argument of the callback function, but at each step the returned value is not returned to the global variable, instead it is returned to the collector variable to be used in the next iteration.
+
+
+spread in js---- it is used to expand the iterables, spread is just three dots(...)
+rest in js-------it is opposite to spread, it wraps up the multiple entries into an iterable(array), rest is also (...)
+
+
+let object = document.getElementById("#idname");
+let object = document.getElementByClass(".classname")
+let object = document.getElementByTagName("tagname")
+let object = document.querySelector("selectors")----select the first tag only
+let object = document.querySelectorAll("selectors")---selects all the tags satisfyin the given selectors
+
+object.getAttribute("class")
+object.setAttribute("class", "myClass")
+
+object.innerHTML = "";
+object.innerText = ""
+object.textContent = ""
+
+object.style.backgroundColor = "freen";
+
+object.classList(); --- returns the collection of all classes on the object
+object.classList.add("anotherClass");
+object.classList.remove("existingClass");
+object.classList.contains("targetedClass");
+object.classList.toggle("class");
+
+object.parentElement
+
+

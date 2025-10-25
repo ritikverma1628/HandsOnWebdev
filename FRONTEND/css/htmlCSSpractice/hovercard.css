@@ -1,0 +1,40 @@
+.outer{
+    display: inline-block;
+    background-color: #f0e9e9;
+    width: 200px;
+    height: 240px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 8px 10px rgb(43, 43, 43);
+    transform: translateZ(0px);
+    transition:0.3s;
+    
+}
+
+.inner{
+    /* border-radius: 10px; */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 50%;
+    
+}
+
+#DA{
+    background-color: indianred;
+    
+}
+
+#SE{
+    background-color: royalblue;
+
+}
+
+p,h2{
+    padding-left: 5px;
+}
+
+.outer:hover{
+    box-shadow: 0px 12px 23px rgb(77, 76, 76);
+    transform: translateZ(50px);
+    transform: scale(1.03);
+}

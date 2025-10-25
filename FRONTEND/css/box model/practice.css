@@ -1,0 +1,36 @@
+/* em is a relative unit , if em is used with non typographical properties like margin and padding then they will be relative to the font size of the container in which ther are applied. But if em is used with font size itself then it will inherit the font size relative to the parent element */
+
+/* div{
+    height: 150px;
+    width: 300px;
+    font-size: 20px;
+    background-color: grey;
+    border: 5px dotted black;
+    margin-top: 20px;
+    margin-right: 1em;
+    margin-bottom: 40px;
+    margin-left: 2em;
+    padding: 1em;
+
+} */
+
+
+
+/* div{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-block;
+
+} */
+
+
+
+li{
+    display: list-item;
+    float: left;
+    margin: 10px;
+
+}

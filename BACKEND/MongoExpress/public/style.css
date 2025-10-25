@@ -1,0 +1,55 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+    font-size:48px;
+    margin-bottom: 25px;
+}
+
+.chat{
+    border: 2px solid black;
+    padding: 7px;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+.from,.to{
+    display:inline-block;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid black;
+    background-color: rgb(115, 150, 214);
+}
+
+.sa, .ea{
+    font-size: 12px;
+    bottom: 0px;
+    text-align: end;
+}
+
+h3{
+    margin-bottom: 20px;
+    color:midnightblue;
+}
+
+button{
+    padding: 5px;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+h3 button{
+    margin-left: 20px;
+}

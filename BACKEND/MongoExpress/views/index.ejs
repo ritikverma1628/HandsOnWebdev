@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Chats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>All chats</h1>
+    <% for(chat of chats){ %>
+        <% const timeArr = chat.sentAt.toString().split(" ") %>
+        <% const timeArr2 = chat.editedAt.toString().split(" ") %>
+        <div class="chat">
+            
+            <div class="from">From: <%= chat.from %></div>
+            <div class="to">To: <%= chat.to %></div>
+
+            <h3>
+                <%= chat.msg %>
+                <button><a href="/chats/<%= chat._id %>/edit">Edit message</a></button> 
+            </h3>
+            
+            <div class="sa">Sent At: <%= timeArr [0] %> , <%= timeArr.slice(1,4).join("-") %>, <%= timeArr[4] %></div>
+            <% if(chat.sentAt.getTime()!=chat.editedAt.getTime()) {%>
+                <div class="ea">Edited At: <%= timeArr2 [0] %> , <%= timeArr2.slice(1,4).join("-") %>, <%= timeArr2[4] %> </div>
+            <% } %>
+
+        </div>
+        <br><br>
+    <% } %>
+
+    <form action="/chats/new" method="get">
+        <button type="submit">Create a new chat</button>
+    </form>
+
+
+    
+
+
+    
+</body>
+</html>

@@ -1,0 +1,90 @@
+.petdiary{
+  margin: 0px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content:space-evenly;
+    align-content: space-evenly;
+    box-shadow: 0px 0px 40px rgb(28, 29, 29);
+    border-radius: 20px;
+    row-gap: 30px;
+  
+    
+}
+
+.animals{
+    border: 2px solid black;
+    flex-basis: 1 1 27%;
+    max-width: 27%;
+    height: 350px;
+    border-radius: 20px;
+    transition: 0.5s ease-out 0.2s;
+    position: relative;
+    padding-top: 20px;
+
+}
+
+.img{
+    height: 50%;
+    width: 90%;
+    margin: 0px auto;
+    transition: 0.5s ease-out 0.2s;
+
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 20px;
+    transition: 0.5s ease-out 0.2s;
+}
+p{
+  overflow: auto;
+  height: 20%;
+  padding: 5px;
+}
+
+h3,p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1,h2{
+    text-align: center;
+}
+
+.animals:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 0px 20px rgb(49, 49, 49);
+    
+}
+
+.animals:hover img{
+    transform: scale(1.07);
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+
+}
+
+@media (max-width: 1024px) {
+  .animals {
+    flex-basis: 1 1 40%;
+    max-width: 40%;
+
+  }
+}
+
+@media (max-width: 768px) {
+  .animals {
+    flex-basis: 1 1 60%;
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .animals {
+    flex-basis: 1 1 90%;
+    max-width: 90%;
+  }
+}

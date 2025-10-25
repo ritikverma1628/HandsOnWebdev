@@ -1,0 +1,17 @@
+.container{
+    background-color: palevioletred;
+    border: 3px solid teal;
+    height: 40px;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0pc auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+#logo{
+    margin-left: 10px;
+}

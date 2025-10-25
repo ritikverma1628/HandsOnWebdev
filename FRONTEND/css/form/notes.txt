@@ -1,0 +1,45 @@
+tags used in html forms
+
+form tag -- used to create an empty form 
+
+action attrbute(of form action)-- value of action attribute contains a link to the server where the data collected in the form should go.
+the data collected in the form is sent to the server in the name-value form and here comes the "name" attribute
+
+name attribute(of input tag ) = you will enter the value into the input box but there should be a name associated with this value of the input box and here comes the "name" attribute which associated the name with the value of the input box. 
+
+input tag -- only opening tag --used to receive different types of data for the form  
+what type of data an input tag will receive depend on the value of type attribute inside the input tag
+
+type attribute---type is an attribute of input tag which takes the values and determines which type of data will an input box receive.
+its value can be text, password, date, time, etc...
+
+placeholder attribute--- attribute of input tag which occupies the place of the input box with the value it holds
+
+label tag-- used to give a label to an input box. we can also labelise an input box using another tag like <h> or <p> or simple text but the label tag specialises in forming the relationship between the labelname and the input box.
+label tag associates a label with an input box
+
+for attribute-- It is an attribute of the label tag  whose values conains the id of the input with which we want to associate that label. "for" attribute signifies that this label is for that id.
+
+button tag--- button tag is used to make a button 
+there are three types of buttons which are specified using the "type" attribute 
+there are three possible values for the "type" attribute 
+these are---    submit(used to submit the data you collected through the form to the server,), 
+                button(creates a generic form which is used with the javascript, not for submitting the data),
+                reset(resets the data collected in the form )
+
+'checkbox' 'type' of an input tag generates checkboxes which are used to multi choice scenarios
+'radio' 'type' of an input tag generates a radio input. multiple radio inputs with same 'name' attribute are generated for the scenarios where single choice has to be made. 
+'range' 'type' of an input tag generates a range bar. In this type of an input tag there are several attributes...type, id, name, value, min, max,set
+
+
+
+select tag --- it is used to generate a drop-down. It contains name attribute and id attribute
+option tag --- option tags are used to add the option in drop-down created by select tag. option tags contain value attribute
+
+textarea tag is used to take text in an area.
+
+
+example ------ 
+
+<label for="pass">Password</label>
+<input id="pass" type="password" placeholder="enter your password">

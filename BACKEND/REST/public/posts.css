@@ -1,0 +1,30 @@
+.red{
+    color: brown;
+    text-decoration: underline brown;
+    text-align: center;
+}
+
+.id{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-weight: 400;
+
+}
+
+.username{
+    padding-top: 0px;
+    margin-top: 0px;
+    color: rgb(193, 49, 49);
+
+}
+
+.content{
+    color: rgb(1, 114, 76);
+}
+
+.post{
+    border: 2px solid rgb(19, 18, 17);
+    padding-left: 10px;
+    margin-bottom: 10px;
+    background-color: ghostwhite;
+}
