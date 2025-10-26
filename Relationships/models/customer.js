@@ -1,3 +1,7 @@
+//this example demostrated the ONE TO MANY relationship where one document of parent collection can be linked to thousands of documents of child collection 
+//it is made by storing the references of child documents in a parent document
+
+
 const mongoose = require('mongoose')
 async function main(){
     await mongoose.connect('mongodb://127.0.0.1:27017/RelationsDemo');
