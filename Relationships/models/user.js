@@ -1,3 +1,7 @@
+//this example demonstrated the ONE TO FEW type of relationship where one parent document is linked to only few document of child collection 
+//the child collection is not made individually for these relationships
+//instead the documents pertaining to child collection are stored inside the parent document
+
 const mongoose = require('mongoose')
 const readline = require('readline')
 
