@@ -24,6 +24,13 @@ const customerSchema = new mongoose.Schema({
     ] 
 
 })
+// post mongoose query middleware -- called after a specific query is executed on the mentioned schema
+//we have to attach this post mongoose query middleware to the schema before the model is created to create the model with all provisions
+customerSchema.post('findOneAndDelete', async(customer)=>{
+    console.log('post middleware called');
+    await Order.deleteMany({_id: {$in:customer.orders}})
+    console.log('exiting post middleware');
+})
 const Customer = mongoose.model('Customer', customerSchema);
 
 const addCustomer = async()=>{
@@ -47,10 +54,18 @@ const addOrder = async()=>{
     console.log(result);
 }
 
+
+const deleteCustomer = async () =>{
+    console.log('Customer is going to be deleted')
+    await Customer.findByIdAndDelete('68fe33cafe1e84eae758a9f4')
+    console.log('deletion statement executed')
+}
+
 async function run(){
     await main();
     // await addOrder();
-    await addCustomer();
+    // await addCustomer();
+    await deleteCustomer();
 }
 
 run().catch(err=>console.log(err))
