@@ -25,3 +25,10 @@ app.get("/:id/:username", (req,res)=>{
     console.log(req.params);
     res.send(`Welcome to the page of ${req.params.username}`);
 })
+
+
+app.get('/sendCookies',(req,res)=>{
+    res.cookie('name','ritik');
+    res.cookie('caste','verma');
+    res.send('cookies sent');
+})
