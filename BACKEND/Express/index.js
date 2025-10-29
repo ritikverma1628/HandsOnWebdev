@@ -1,5 +1,8 @@
-import express from "express"
+const express = require('express')
+const cookieParser = require('cookie-parser');
+
 const app = express();
+app.use(cookieParser())
 
 const port = 3000;
 app.listen(port, ()=>{
@@ -31,4 +34,9 @@ app.get('/sendCookies',(req,res)=>{
     res.cookie('name','ritik');
     res.cookie('caste','verma');
     res.send('cookies sent');
+})
+
+app.get('/getCookies',(req,res)=>{
+    console.dir(req.cookies);
+    res.send(req.cookies);
 })
