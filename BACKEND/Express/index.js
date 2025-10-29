@@ -2,7 +2,7 @@ const express = require('express')
 const cookieParser = require('cookie-parser');
 
 const app = express();
-app.use(cookieParser())
+app.use(cookieParser('secretcode'))
 
 const port = 3000;
 app.listen(port, ()=>{
@@ -39,4 +39,9 @@ app.get('/sendCookies',(req,res)=>{
 app.get('/getCookies',(req,res)=>{
     console.dir(req.cookies);
     res.send(req.cookies);
+})
+
+app.get('/sendSignedCookies',(req,res)=>{
+    res.cookie('class','rich', {signed:true});
+    res.send('Signed cookie sent ')
 })
