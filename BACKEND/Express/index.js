@@ -45,3 +45,7 @@ app.get('/sendSignedCookies',(req,res)=>{
     res.cookie('class','rich', {signed:true});
     res.send('Signed cookie sent ')
 })
+
+app.get('/getSignedCookies',(req,res)=>{
+    res.send(req.signedCookies);
+})
