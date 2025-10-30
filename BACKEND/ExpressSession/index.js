@@ -1,7 +1,14 @@
 const express = require('express')
+const path = require('path')
 const session = require('express-session');
+const flash = require('connect-flash');
 const app = express();
+
 app.use(session({secret:'secretcode', resave:false, saveUninitialized:true}));
+app.use(flash());
+app.set('view engine','ejs');
+app.set('views',path.join(__dirname,'/views'));
+
 app.listen(3000,(req,res)=>{
     console.log('Server is listening')
 })
@@ -21,4 +28,15 @@ app.get('/reqNumber',(req,res)=>{
         req.session.count=1;
     }
     res.send(`You have sent ${req.session.count} number of request to this route`)
+})
+
+app.get('/register',(req,res)=>{
+    const {name='anonymous'} = req.query;
+    req.session.name = name;
+    req.flash('msg','User registered successfully');
+    res.redirect('/greetUser');
+})
+
+app.get('/greetUser',(req,res)=>{
+    res.render('greetings.ejs',{name:req.session.name,msg:req.flash('msg')});
 })
