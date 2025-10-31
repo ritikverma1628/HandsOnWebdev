@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const session = require('express-session');
-const flash = require('connect-flash');
+const flash = require('connect-flash'); //npm package to flash a message once after a trigger, this message is stored in the session storage only once and then gets deleted
 const app = express();
 
 app.use(session({secret:'secretcode', resave:false, saveUninitialized:true}));
@@ -33,10 +33,15 @@ app.get('/reqNumber',(req,res)=>{
 app.get('/register',(req,res)=>{
     const {name='anonymous'} = req.query;
     req.session.name = name;
-    req.flash('msg','User registered successfully');
+    if(name==='anonymous')
+        req.flash('error','User registration failed')
+    else
+        req.flash('success','User registered successfully');
     res.redirect('/greetUser');
 })
 
 app.get('/greetUser',(req,res)=>{
-    res.render('greetings.ejs',{name:req.session.name,msg:req.flash('msg')});
+    res.locals.success = req.flash('success')
+    res.locals.error = req.flash('error')
+    res.render('greetings.ejs',{name:req.session.name});
 })
