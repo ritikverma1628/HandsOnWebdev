@@ -1,9 +1,13 @@
+import './Item.css'
+
 function Item({name, price, features}){
   return (
     <>
-      <h2>Item name: {name}</h2>
-      <p>Item Price: {price}</p>
-      <div>{features.map((feature)=><li>{feature}</li>)}</div>
+      <div className='item'>
+        <h2>Item name: {name}</h2>
+        <p>Item Price: {price}</p>
+        <div className="features">{features.map((feature)=><li>{feature}</li>)}</div>
+      </div>
     </>
   )
 }
