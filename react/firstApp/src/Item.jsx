@@ -1,9 +1,8 @@
-function Item(){
-    const itemName = "Laptop";
+function Item({name, price}){
   return (
     <>
-      <h2>Item name: {itemName}</h2>
-      <p>Item Price: {2*10000}</p>
+      <h2>Item name: {name}</h2>
+      <p>Item Price: {price}</p>
     </>
   )
 }
