@@ -1,12 +1,15 @@
 import './App.css'
 // import ItemsTab from './ItemsTab'
 import CardsTab from './CardsTab'
+import Events from './Events'
 
 function App() {
   return (
       <>
-        <h1>Blockbuster Deals on Computer Accessories | Shop Now </h1>
-        <CardsTab></CardsTab>
+        {/* <h1>Blockbuster Deals on Computer Accessories | Shop Now </h1>
+        <CardsTab></CardsTab> */}
+
+        <Events></Events>
       </>
   )
     
