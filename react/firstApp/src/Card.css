@@ -1,0 +1,16 @@
+.card{
+    border: 2px solid black;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+.cardDescription{
+    padding: 0px 36px;
+}
+
+.cardPrice{
+    background-color: rgb(232, 181, 105);
+    height: 40px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
