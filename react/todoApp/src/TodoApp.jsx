@@ -9,7 +9,9 @@ export default function TodoApp(){
 
     function handletodoTasks(event){
         event.preventDefault();
-        settodoTasks([...todoTasks, {taskName:task, id:uuidv4()}]);
+        settodoTasks((todoTasks)=>{
+            return [...todoTasks, {taskName:task, id:uuidv4()}]
+        });
         setTask('')
         
     }
