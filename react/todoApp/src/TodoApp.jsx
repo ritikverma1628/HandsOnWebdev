@@ -1,13 +1,15 @@
 import { useState } from "react"
+import { v4 as uuidv4 } from 'uuid';
+
 
 export default function TodoApp(){
 
-    let [todoTasks, settodoTasks] = useState([])
+    let [todoTasks, settodoTasks] = useState([{taskName:'', id:''}])
     let [task, setTask] = useState('')
 
     function handletodoTasks(event){
         event.preventDefault();
-        settodoTasks([...todoTasks, task]);
+        settodoTasks([...todoTasks, {taskName:task, id:uuidv4()}]);
         setTask('')
         
     }
@@ -25,7 +27,7 @@ export default function TodoApp(){
             <br /><br />
             <hr />
             <p>----------ToDo List----------</p>
-            <div>{todoTasks.map((todoTask)=><p>{todoTask}</p>)}</div>
+            <div>{todoTasks.map((todoTask)=><p key={todoTask.id}>{todoTask.taskName}</p>)}</div>
         </>
     )
 }
