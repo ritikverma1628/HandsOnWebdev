@@ -9,9 +9,7 @@ export default function TodoApp(){
 
     function handletodoTasks(event){
         event.preventDefault();
-        settodoTasks((todoTasks)=>{
-            return [...todoTasks, {taskName:task, id:uuidv4()}]
-        });
+        settodoTasks((todoTasks)=>[...todoTasks, {taskName:task, id:uuidv4()}]);
         setTask('')
         
     }
@@ -21,7 +19,7 @@ export default function TodoApp(){
     }
 
     function deleteTask(id){
-        settodoTasks(todoTasks.filter((todoTask)=>{
+        settodoTasks((todoTasks)=>todoTasks.filter((todoTask)=>{
             if(todoTask.id!=id){
                 return todoTask;
             }
