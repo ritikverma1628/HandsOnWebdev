@@ -26,6 +26,26 @@ export default function TodoApp(){
         }))
     }
 
+    function handleDone(id){
+        settodoTasks((todoTasks)=>todoTasks.map((todoTask)=>{
+            if(todoTask.id==id){
+                todoTask.taskName = <del>{todoTask.taskName}</del>
+                return todoTask;
+            }
+            else{
+                return todoTask;
+            }
+        }))
+    }
+
+    function handleAllDone(){
+        settodoTasks((todoTasks)=>todoTasks.map((todoTask)=>{
+                todoTask.taskName = <del>{todoTask.taskName}</del>
+                return todoTask;
+            
+        }))
+    }
+
     return(
         <>
             <form action="">
@@ -42,10 +62,15 @@ export default function TodoApp(){
                         <span key={todoTask.id}>{todoTask.taskName}</span>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <button onClick={()=>deleteTask(todoTask.id)} >Delete</button>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <button onClick={()=>handleDone(todoTask.id)}>Mark As Done</button>
+
                     </div>)
                 }
 
             </div>
+            <br /><hr />
+            <button onClick={handleAllDone}>Mark As All Done</button>
         </>
     )
 }
