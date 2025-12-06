@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function TodoApp(){
 
-    let [todoTasks, settodoTasks] = useState([{taskName:'', id:''}])
+    let [todoTasks, settodoTasks] = useState([])
     let [task, setTask] = useState('')
 
     function handletodoTasks(event){
@@ -20,6 +20,14 @@ export default function TodoApp(){
         setTask(event.target.value)
     }
 
+    function deleteTask(id){
+        settodoTasks(todoTasks.filter((todoTask)=>{
+            if(todoTask.id!=id){
+                return todoTask;
+            }
+        }))
+    }
+
     return(
         <>
             <form action="">
@@ -29,7 +37,17 @@ export default function TodoApp(){
             <br /><br />
             <hr />
             <p>----------ToDo List----------</p>
-            <div>{todoTasks.map((todoTask)=><p key={todoTask.id}>{todoTask.taskName}</p>)}</div>
+            <div>
+            
+                {todoTasks.map((todoTask)=>
+                    <div key={todoTask.id}>
+                        <span key={todoTask.id}>{todoTask.taskName}</span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <button onClick={()=>deleteTask(todoTask.id)} >Delete</button>
+                    </div>)
+                }
+
+            </div>
         </>
     )
 }
