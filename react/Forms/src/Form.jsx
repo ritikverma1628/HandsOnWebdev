@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './Form.css'
 export default function Form(){
     let [formData, setFormData] = useState({
             username:'',
@@ -22,7 +23,8 @@ export default function Form(){
     return(
         <>
             
-            <form action="" onSubmit={submitFormData}>
+            <form action="" onSubmit={submitFormData} className="form">
+                <h2 style={{textAlign:'center'}}>COMMENT FORM</h2>
                 <label htmlFor="username">Enter you username</label><br />
                 <input type="text" id="username" name="username" value={formData.username} onChange={handleFormData}/><br /><br />
 
