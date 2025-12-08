@@ -1,4 +1,4 @@
-import Form from './Form'
+import Comments from './Comments'
 import './App.css'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>  
-      <Form></Form>
+      <Comments></Comments>
     </>
   )
 }

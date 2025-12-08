@@ -1,6 +1,6 @@
 import { useState } from "react"
 import './Form.css'
-export default function Form(){
+export default function Form({addComments}){
     let [formData, setFormData] = useState({
             username:'',
             comment:'',
@@ -11,8 +11,9 @@ export default function Form(){
         setFormData({...formData, [event.target.name]:event.target.value})
     }
 
-    function submitFormData(event){
-        event.preventDefault();
+    function submitFormData(e){
+        e.preventDefault();
+        addComments(formData)
         setFormData({
             username:'',
             comment:'',
@@ -24,7 +25,7 @@ export default function Form(){
         <>
             
             <form action="" onSubmit={submitFormData} className="form">
-                <h2 style={{textAlign:'center'}}>COMMENT FORM</h2>
+                <h1 style={{textAlign:'center', marginTop:'0px', paddingTop:'0px'}}>COMMENT FORM</h1>
                 <label htmlFor="username">Enter you username</label><br />
                 <input type="text" id="username" name="username" value={formData.username} onChange={handleFormData}/><br /><br />
 
@@ -36,6 +37,9 @@ export default function Form(){
 
                 <button>Submit</button>
             </form>
+
+            <br /><br />
+            <hr />
            
         </>
     )
