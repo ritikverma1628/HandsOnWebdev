@@ -15,7 +15,7 @@ export default function SignupFormik({addComments}){
                 comment: Yup.string().required('Please fill in some comment'), 
                 rating:Yup.number().min(1, 'Rating should be greater than or equal to 1').max(5, 'Rating should be less than or equal to 5').required()
             })}
-            onSubmit={(values, {onSubmitting})=>{
+            onSubmit={(values, {setSubmitting, resetForm})=>{
                 addComments(values)
                 resetForm();
             }}>
