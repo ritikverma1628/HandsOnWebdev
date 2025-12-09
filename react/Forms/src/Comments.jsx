@@ -1,4 +1,5 @@
 import { useState } from "react"
+import SignupFormik from "../SignupFormik"
 import Form from "./Form"
 import './Comments.css'
 
@@ -12,7 +13,7 @@ export default function Comments(){
 
     return(
         <>
-            <Form addComments={addComments}></Form>
+            <SignupFormik className='form' addComments={addComments}></SignupFormik>
             <h1>COMMENTS</h1>
             <div className="comments">
 
