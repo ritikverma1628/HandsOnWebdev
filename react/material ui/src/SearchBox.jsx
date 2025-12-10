@@ -1,6 +1,7 @@
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
+import './SearchBox.css'
 
 export default function SearchBox(){
 
@@ -25,6 +26,7 @@ export default function SearchBox(){
                     <Button type='submit' variant="contained" onSubmit={handleSubmit} >Search</Button>
 
                 </form>
+                <br /><br />
             </div>
         </>
     )
