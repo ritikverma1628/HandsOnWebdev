@@ -1,11 +1,11 @@
-import SearchBox from './SearchBox'
+import WeatherWindow from './WeatherWindow'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <SearchBox></SearchBox>
+      <WeatherWindow></WeatherWindow>
     </>
   )
 }
